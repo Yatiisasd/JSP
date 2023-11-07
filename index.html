@@ -1,20 +1,63 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Page d'Accueil</title>
+    <title>Menu responsive</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mp2.css">
 </head>
 <body>
-    <h1>Bienvenue sur notre site</h1>
-    <p>Ceci est la page d'accueil de notre site. Vous pouvez naviguer vers d'autres pages en utilisant les liens ci-dessous :</p>
-    
-    <ul>
-        <li><a href="html.html">Mission3</a></li>
-        <li><a href="cv.html">Mission4</a><li>
-        <li><a href="tp6.html">Tp6</a><li>
-        <li><a href="tp7.html">Tp7</a><li>  
-        <li><a href="certifier.html">Mes Certifications</a><li>    
-        
-    </ul>
-
+    <div class="profile-pic"></div>
+    <nav> 
+        <label for="menu-mobile" class="menu-mobile">Menu</label>
+        <input type="checkbox" id="menu-mobile" role="button">
+        <ul>
+            <li class="menu-html"><a href="#">HTML & CSS</a>
+                <ul class="submenu">
+                    <li><a href="#">Cours HTML et CSS</a></li>
+                    <li><a href="#">Elements HTML</a></li>
+                    <li><a href="#">Attributs HTML</a></li>
+                    <li><a href="#">Exercices</a></li>
+                </ul>
+            </li>
+            <li class="menu-css"><a href="#">CSS</a>
+                <ul class="submenu">
+                    <li><a href="#">Cours HTML et CSS</a></li>
+                    <li><a href="#">Proprietes CSS</a></li>
+                    <li><a href="#">Selecteur CSS</a></li>
+                    <li><a href="#">Exercices</a></li>
+                </ul>
+            </li>
+            <li class="menu-js"><a href="#">Javascript</a>
+                <ul class="submenu">
+                    <li><a href="#">Cours Javascript</a></li>
+                    <li><a href="#">Fonctions Javascript</a></li>
+                    <li><a href="#">Le DOM</a></li>
+                    <li><a href="#">Exercices</a></li>
+                </ul>
+            </li>
+            <li class="menu-php"><a href="#">PHP</a>
+                <ul class="submenu">
+                    <li><a href="#">Cours PHP</a></li>
+                    <li><a href="#">Programmation PHP</a></li>
+                    <li><a href="#">Bases de données MySQL</a></li>
+                </ul>
+            </li>
+            <li class="menu-missions"><a href="#">Missions</a>
+                <ul class="submenu">
+                    <li><a href="#">Mission 1</a></li>
+                    <li><a href="#">Mission 2</a></li>
+                    <li><a href="#">Mission 3</a></li>
+                </ul>
+            </li>
+            <li class="menu-certifications"><a href="#">Certifications</a>
+                <ul class="submenu">
+                    <li><a href="#">Certification 1</a></li>
+                    <li><a href="#">Certification 2</a></li>
+                    <li><a href="#">Certification 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
 </html>
