@@ -1,0 +1,62 @@
+<html lang="en">
+    <body>
+        <link rel="stylesheet" type="text/css" href="tp9i.css">
+        <h2>Tableau Dynamique</h2>
+        <table id="myTable">
+            <tr>
+                <td>Nom</td>
+                <td>Age</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Jan</td>
+                <td>25</td>
+            </tr>
+        </table>
+
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom">
+
+        <label for="age">Age:</label>
+        <input type="text" id="age">
+
+        <button onclick="ajouterLigne()">Ajouter une ligne</button>
+
+        <script>
+            function ajouterLigne() {
+                var table = document.getElementById("myTable");
+                var nomInput = document.getElementById("nom");
+                var ageInput = document.getElementById("age");
+
+                var nom = nomInput.value;
+                var age = ageInput.value;
+
+                // Check if fields are empty
+                if (nom.trim() === '' || age.trim() === '') {
+                    alert("Veuillez remplir tous les champs.");
+                    return;
+                }
+
+                // Check if age is between 15 and 20
+                if (isNaN(age) || age < 10 || age > 20) {
+                    alert("invalide.");
+                    return;
+                }
+
+                var newRow = table.insertRow(-1);
+                var cell1 = newRow.insertCell(0);
+                var cell2 = newRow.insertCell(1);
+
+                cell1.innerHTML = nom;
+                cell2.innerHTML = age;
+
+                // Clear input fields
+                nomInput.value = "";
+                ageInput.value = "";
+            }
+        </script>
+    </body>
+</html>
