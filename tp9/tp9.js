@@ -60,3 +60,29 @@ function cdc() {
 
     window.location.href = "tp9i.html";
 }
+
+function seconnecter2 () {
+    window.location.href = "tp9i2.html"
+}
+
+function seconnecter3() {
+    var maxAttempts = 3;
+    var attempts = 0;
+
+    do {
+        var id = prompt("Entrez votre nom d'utilisateur");
+        var mdp = prompt("Entrez votre mot de passe");
+
+        if (id === "admin" && mdp === "admin") {
+            document.write("Bienvenue " + id);
+            break;
+        } else {
+            alert("Accès refusé");
+            attempts += 1;
+        }
+    } while (attempts < maxAttempts);
+
+    if (attempts === maxAttempts) {
+        alert("Délai dépassé");
+    }
+}
